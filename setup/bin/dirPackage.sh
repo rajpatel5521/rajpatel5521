@@ -20,3 +20,13 @@ function pd() {
     chdir $1
   fi
 }
+
+function pr() {
+  local len=${#dirStack[@]}
+  while [ $len -gt 0 ]; do
+    echo $len ${dirStack[$len]}
+    let len=len-1
+  done
+}
+
+
