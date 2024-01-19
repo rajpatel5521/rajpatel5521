@@ -7,8 +7,8 @@ function pd() {
   local len=${#dirStack[@]}
   local p=$(pwd)
   while [ $len -gt 0 ]; do
-    local s=$dirStack[$len]
-    if [  "p" = "$s"  ]; then
+    local s=${dirStack[$len]}
+    if [  "$p" = "$s"  ]; then
       break
     fi
     let len=len-1
