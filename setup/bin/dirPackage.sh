@@ -29,4 +29,13 @@ function pr() {
   done
 }
 
-
+installDir() {
+  local dirStack=$1
+  local len=0
+  cat $DIR_LIST | while read d
+  do
+    dirStack[$len]=$d
+    let len=len+1
+  done
+}
+}
